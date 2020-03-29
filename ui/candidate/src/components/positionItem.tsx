@@ -1,7 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { makeStyles, createStyles, Grid, Theme } from "@material-ui/core";
 import { Position } from "../types";
 import nl2br from "react-nl2br";
+import ApplicationForm from "./applicationForm";
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -20,7 +21,7 @@ interface Props {
 	position: Position;
 }
 
-const PositionItem = ({ position }: Props) => {
+const PositionItem: FC<Props> = ({ position }: Props) => {
 	const classes = useStyles();
 
 	return (
@@ -32,7 +33,9 @@ const PositionItem = ({ position }: Props) => {
 				<Grid item xs={12} sm={6}>
 					{nl2br(position.description)}
 				</Grid>
-				<Grid item xs={12} sm={6}></Grid>
+				<Grid item xs={12} sm={6}>
+					<ApplicationForm position={position} />
+				</Grid>
 			</Grid>
 		</div>
 	);
