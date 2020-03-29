@@ -5,7 +5,7 @@ import (
 )
 
 const POSITIONS = "positions"
-const CANDIDATES = "candidates"
+const APPLICATIONS = "applications"
 
 type Storage struct {
 	f *firestore.Client

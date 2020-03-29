@@ -5,18 +5,18 @@ import (
 	"join-react-test/types"
 )
 
-func (s *Storage) GetCandidate(ID string) (*types.Candidate, error) {
+func (s *Storage) GetApplication(ID string) (*types.Application, error) {
 	ctx := context.Background()
 
-	data, err := s.f.Collection(CANDIDATES).Doc(ID).Get(ctx)
+	data, err := s.f.Collection(APPLICATIONS).Doc(ID).Get(ctx)
 
 	if err != nil {
 		return nil, err
 	}
 
-	candidate := &types.Candidate{}
+	application := &types.Application{}
 
-	data.DataTo(candidate)
+	data.DataTo(application)
 
-	return candidate, nil
+	return application, nil
 }

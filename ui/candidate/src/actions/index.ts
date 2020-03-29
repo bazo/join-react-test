@@ -10,3 +10,8 @@ export async function getPositions() {
 export async function getPosition(id: string) {
 	return http.get<Position>(`/api/positions/${id}`);
 }
+
+export async function saveApplication(data: any) {
+	console.log(JSON.stringify(data));
+	return http.put<Position>("/api/applications", data);
+}

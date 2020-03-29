@@ -45,8 +45,9 @@ func main() {
 
 	apiRouter := router.PathPrefix("/api").Subrouter()
 
-	apiRouter.HandleFunc("/positions", api.GetPositions)
-	apiRouter.HandleFunc("/positions/{id}", api.GetPosition)
+	apiRouter.HandleFunc("/positions", api.GetPositions).Methods(http.MethodGet)
+	apiRouter.HandleFunc("/positions/{id}", api.GetPosition).Methods(http.MethodGet)
+	apiRouter.HandleFunc("/applications", api.SaveApplication).Methods(http.MethodPut)
 
 	port := os.Getenv("PORT")
 	if port == "" {
