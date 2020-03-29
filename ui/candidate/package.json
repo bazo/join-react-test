@@ -2,7 +2,11 @@
 	"name": "candidate",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {},
+	"dependencies": {
+		"react-final-form": "^6.3.5",
+		"react-nl2br": "^0.6.0"
+	},
+	"proxy": "http://localhost:8200/",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",

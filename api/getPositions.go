@@ -3,11 +3,9 @@ package api
 import (
 	"log"
 	"net/http"
-
-	"github.com/julienschmidt/httprouter"
 )
 
-func (api *API) GetReceipts(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+func (api *API) GetPositions(w http.ResponseWriter, r *http.Request) {
 
 	positions, err := api.storage.GetPositions()
 

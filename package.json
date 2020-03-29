@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@bazo/fetch-client": "^0.0.1"
+  }
+}

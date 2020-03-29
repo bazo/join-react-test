@@ -15,6 +15,14 @@ type Position struct {
 	Lang                 Lang          `json:"lang"`
 	AlternateLanguages   []interface{} `json:"alternate_languages"`
 	Data                 Data          `json:"data"`
+	Description          string        `json:"description"`
+	ContactPerson        ContactPerson `json:"contact_person"`
+}
+
+type ContactPerson struct {
+	Name     string `json:name`
+	Role     string `json:role`
+	PhotoURL string `json:photo_url`
 }
 
 type Data struct {

@@ -1,0 +1,310 @@
+[
+	{
+		"id": "XScPXBEAACQAFEg5",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScPXBEAACQAFEg5%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:28:47+0000",
+		"last_publication_date": "2019-07-11T15:16:28+0000",
+		"slugs": ["junior-recruitment-specialist-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "(Junior) Recruitment Specialist (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "operations",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/82008-junior-recruitment-specialist-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScK2BEAACYAFDMK",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScK2BEAACYAFDMK%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:09:32+0000",
+		"last_publication_date": "2019-07-11T15:14:02+0000",
+		"slugs": ["junior-sales-executive-inside-sales-tele-sales-wmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "(Junior) Sales Executive (Inside Sales, Tele Sales) (w/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/79430-junior-sales-executive-inside-sales-tele-sales-w-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScMtBEAACcAFDv-",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScMtBEAACcAFDv-%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:17:28+0000",
+		"last_publication_date": "2019-07-11T15:15:51+0000",
+		"slugs": ["business-development-internship-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Business Development Internship (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "internship",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/80535-business-development-internship-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScMPhEAACYAFDnS",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScMPhEAACYAFDnS%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:15:30+0000",
+		"last_publication_date": "2019-07-11T15:15:33+0000",
+		"slugs": ["business-intelligence-analyst-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Business Intelligence Analyst (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/82382-business-intelligence-analyst-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScMDhEAACcAFDjY",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScMDhEAACcAFDjY%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:14:41+0000",
+		"last_publication_date": "2019-07-11T15:15:13+0000",
+		"slugs": ["customer-success-specialist-wmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Customer Success Specialist (w/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/80720-customer-success-specialist-w-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScQYBEAACcAFE0T",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScQYBEAACcAFE0T%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:33:07+0000",
+		"last_publication_date": "2019-07-11T15:17:52+0000",
+		"slugs": ["marketing-internship-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Marketing Internship (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "marketing",
+			"type": "internship",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/79690-marketing-internship-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScQQBEAACcAFEx_",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScQQBEAACcAFEx_%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:32:36+0000",
+		"last_publication_date": "2019-07-11T15:17:31+0000",
+		"slugs": ["performance-marketing-manager-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Performance Marketing Manager (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "marketing",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/82463-performance-marketing-manager-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScKGREAACUAFC-Z",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScKGREAACUAFC-Z%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:07:13+0000",
+		"last_publication_date": "2019-07-11T15:13:44+0000",
+		"slugs": ["praktikum-customer-success-wmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Praktikum Customer Success (w/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "internship",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/78064-praktikum-customer-success-w-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScInREAACUAFCii",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScInREAACUAFCii%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:00:01+0000",
+		"last_publication_date": "2019-07-11T15:13:09+0000",
+		"slugs": ["senior-business-intelligence-manager-fmd"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Senior Business Intelligence Manager (f/m/d)",
+					"spans": []
+				}
+			],
+			"department": "sales",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/78371-senior-business-intelligence-manager-f-m-d"
+			}
+		}
+	},
+	{
+		"id": "XScRdREAACYAFFIl",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScRdREAACYAFFIl%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:37:44+0000",
+		"last_publication_date": "2019-07-31T13:37:38+0000",
+		"slugs": ["senior-frontend-engineer-react.js--redux"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Senior Frontend Engineer (React.js + Redux)",
+					"spans": []
+				}
+			],
+			"department": "engineering",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/281754-senior-frontend-engineer-react-js-redux"
+			}
+		}
+	},
+	{
+		"id": "XScRMBEAACcAFFDj",
+		"uid": null,
+		"type": "job",
+		"href": "https://join-public-pages.cdn.prismic.io/api/v2/documents/search?ref=Xnx1_BAAACIAzU0i\u0026q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XScRMBEAACcAFFDj%22%29+%5D%5D",
+		"tags": [],
+		"first_publication_date": "2019-07-11T10:36:36+0000",
+		"last_publication_date": "2019-07-31T13:38:49+0000",
+		"slugs": ["senior-software-engineer-node.js"],
+		"linked_documents": [],
+		"lang": "en-us",
+		"alternate_languages": [],
+		"data": {
+			"title": [
+				{
+					"type": "paragraph",
+					"text": "Senior Software Engineer (Node.js)",
+					"spans": []
+				}
+			],
+			"department": "engineering",
+			"type": "employee",
+			"url": {
+				"link_type": "Web",
+				"url": "https://join.join.com/jobs/281750-senior-software-engineer-node-js"
+			}
+		}
+	}
+]
