@@ -18,8 +18,6 @@ const PositionPage: FC<RouteChildrenProps<any>> = ({ match }: RouteChildrenProps
 		return <CircularProgress color="secondary" />;
 	}
 
-	console.log(position);
-
 	return <PositionItem position={position} />;
 };
 
