@@ -1,0 +1,4 @@
+node_modules
+*.log
+firebase_keys.json
+build
