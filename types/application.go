@@ -1,14 +1,18 @@
 package types
 
+import "time"
+
 type Application struct {
-	ID         string `json:"positionId,omitempty"`
-	PositionID string `json:"positionId"`
-	Email      string `json:"email"`
-	Password   string `json:"password"`
-	FirstName  string `json:"firstName"`
-	LastName   string `json:"lastName"`
-	Phone      string `json:"phone"`
-	Photo      Photo  `json:"photo"`
+	ID         string    `json:"id,omitempty"`
+	PositionID string    `json:"positionId"`
+	Email      string    `json:"email"`
+	Password   string    `json:"password"`
+	FirstName  string    `json:"firstName"`
+	LastName   string    `json:"lastName"`
+	Phone      string    `json:"phone"`
+	Photo      Photo     `json:"photo"`
+	AppliedOn  time.Time `json:"applied_on"`
+	State      string    `json:"state"`
 }
 
 type Photo struct {
