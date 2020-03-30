@@ -1,0 +1,12 @@
+{
+	"name": "join-react-test",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:bazo/join-react-test.git",
+	"author": "Martin Bazik <martin@bazo.sk>",
+	"license": "MIT",
+	"scripts": {
+		"install": "cd ui && yarn install",
+		"build": "cd ui && yarn build"
+	}
+}

@@ -1,0 +1,16 @@
+steps:
+    - name: node:latest
+      entrypoint: yarn
+      args: ["install"]
+    - name: node:latest
+      entrypoint: yarn
+      args: ["build"]
+    - name: golang:latest
+      entrypoint: go
+      args: ["get", "github.com/GeertJohan/go.rice/rice"]
+    - name: golang:latest
+      entrypoint: rice
+      args: ["embed-go"]
+    - name: "gcr.io/cloud-builders/gcloud"
+      args: ["app", "deploy"]
+timeout: "1600s"

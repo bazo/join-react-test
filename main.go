@@ -26,14 +26,19 @@ type spaHandler struct {
 func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	path, err := filepath.Abs(r.URL.Path)
 
+	log.Println(path)
+
 	if strings.HasPrefix(path, "/recruiter") {
 		path = strings.TrimPrefix(path, "/recruiter")
+		path = "/"
 	}
 
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+
+	log.Println(path)
 
 	if path == "/" {
 		path = h.indexPath
@@ -42,6 +47,7 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	b, err := h.box.Bytes(path)
 
 	if err != nil {
+		log.Println(err)
 		b, err = h.box.Bytes(h.indexPath)
 	}
 

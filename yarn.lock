@@ -2,14 +2,3 @@
 # yarn lockfile v1
 
 
-"@bazo/event-emitter@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@bazo/event-emitter/-/event-emitter-0.0.5.tgz#e473f46a56071af91a02d71953d707cba0753fda"
-  integrity sha512-2Yk2v90/P/A0jn+C3/IHeW4mHfx2ac2vgP80SfWTfF4YDIuY3CE5fQzeROIOizUpWdJRNFYJSTngieh6DuDZDQ==
-
-"@bazo/fetch-client@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@bazo/fetch-client/-/fetch-client-0.0.1.tgz#6d543362c10322acbf89e16dfd306ca7fe595249"
-  integrity sha512-L06wBVSLcMlhxePSQ6WcosBH0E3zXS85FfDGzncP48Lvn4ebS7b/pI7+z7o+ymrOOjxViKMCNrVgvFrOqYnwvw==
-  dependencies:
-    "@bazo/event-emitter" "^0.0.5"
