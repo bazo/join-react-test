@@ -97,7 +97,7 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 	};
 
 	return (
-		<Card className={classes.root}>
+		<Card className={`${classes.root} application`}>
 			<CardHeader
 				avatar={<Avatar aria-label="application" src={application.avatar}></Avatar>}
 				action={

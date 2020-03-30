@@ -39,7 +39,9 @@ const ApplicationsList: FC = () => {
 
 	return (
 		<div>
-			<p>{applications.length} applications submitted</p>
+			<p>
+				<span className="applications-length">{applications.length}</span> applications submitted
+			</p>
 			{applications.map((application, key) => {
 				return (
 					<ApplicationItem
