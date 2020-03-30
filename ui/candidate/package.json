@@ -23,6 +23,8 @@
 		"start": "env-cmd -f .env.local react-scripts start",
 		"build": "env-cmd -f .env react-scripts build",
 		"test": "react-scripts test",
+		"cypress:run": "yarn run cypress run",
+		"cypress:open": "yarn run cypress open",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -39,5 +41,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"cypress": "^4.3.0"
 	}
 }
