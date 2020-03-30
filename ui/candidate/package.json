@@ -4,8 +4,11 @@
 	"private": true,
 	"dependencies": {
 		"@material-ui/core": "^4.9.8",
+		"@material-ui/icons": "^4.9.1",
 		"@material-ui/lab": "^4.0.0-alpha.47",
 		"@material-ui/pickers": "3.x.x",
+		"date-fns": "^2.11.1",
+		"env-cmd": "^10.1.0",
 		"final-form": "^4.18.7",
 		"libphonenumber-js": "^1.7.48",
 		"mui-rff": "^2.1.2",
@@ -13,14 +16,12 @@
 		"react-dropzone": "^10.2.2",
 		"react-easy-crop": "^2.1.0",
 		"react-final-form": "^6.3.5",
-		"react-nl2br": "^0.6.0",
-		"@material-ui/icons": "^4.9.1",
-		"date-fns": "^2.11.1"
+		"react-nl2br": "^0.6.0"
 	},
 	"proxy": "http://localhost:8200/",
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "env-cmd -f .env.local react-scripts start",
+		"build": "env-cmd -f .env react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
