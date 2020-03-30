@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"strings"
 
 	firebase "firebase.google.com/go"
 	rice "github.com/GeertJohan/go.rice"
@@ -26,19 +25,10 @@ type spaHandler struct {
 func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	path, err := filepath.Abs(r.URL.Path)
 
-	log.Println(path)
-
-	if strings.HasPrefix(path, "/recruiter") {
-		path = strings.TrimPrefix(path, "/recruiter")
-		path = "/"
-	}
-
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-
-	log.Println(path)
 
 	if path == "/" {
 		path = h.indexPath
@@ -78,7 +68,6 @@ func main() {
 	api := api.NewAPI(storage)
 
 	candidateBox := rice.MustFindBox("./ui/candidate/build")
-	recruiterBox := rice.MustFindBox("./ui/recruiter/build")
 
 	router := mux.NewRouter()
 
@@ -90,9 +79,7 @@ func main() {
 	apiRouter.HandleFunc("/applications", api.GetApplications).Methods(http.MethodGet)
 
 	spaC := spaHandler{staticPath: "build", indexPath: "index.html", box: candidateBox}
-	spaR := spaHandler{staticPath: "build", indexPath: "index.html", box: recruiterBox}
 	router.PathPrefix("/").Handler(spaC)
-	router.PathPrefix("/recruiter").Handler(spaR)
 
 	port := os.Getenv("PORT")
 	if port == "" {

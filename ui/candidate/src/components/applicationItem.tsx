@@ -9,7 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { CircularProgress, Popper, Grid, Chip, Button } from "@material-ui/core";
+import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@material-ui/core";
 import format from "date-fns/format";
 
 function calculateScore(application: Application): number {
@@ -58,10 +58,8 @@ const useStyles = makeStyles((theme: Theme) =>
 			maxWidth: "100%",
 			marginTop: 15
 		},
-		paper: {
-			border: "1px solid",
-			padding: theme.spacing(1),
-			backgroundColor: theme.palette.background.paper
+		menuItem: {
+			textTransform: "uppercase"
 		}
 	})
 );
@@ -71,8 +69,12 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-	const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-		setAnchorEl(anchorEl ? null : event.currentTarget);
+	const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
 	};
 
 	const open = Boolean(anchorEl);
@@ -100,28 +102,41 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 				avatar={<Avatar aria-label="application" src={application.avatar}></Avatar>}
 				action={
 					<div>
-						<IconButton aria-label="settings" onClick={handleClick} aria-describedby={id}>
+						<IconButton aria-label="settings" onClick={handleMenu} aria-describedby={id}>
 							<MoreVertIcon />
 						</IconButton>
-						<Popper id={id} open={open} anchorEl={anchorEl}>
-							<div className={classes.paper}>
-								<Button variant="contained" color="secondary" onClick={deleteItem}>
-									Delete
-								</Button>
-								<br />
-								{nextStates.map(state => {
-									return (
-										<Button
-											variant="contained"
-											onClick={onStateChange.bind(null, state)}
-											key={state}
-										>
-											{state}
-										</Button>
-									);
-								})}
-							</div>
-						</Popper>
+
+						<Menu
+							id="menu-appbar"
+							anchorEl={anchorEl}
+							anchorOrigin={{
+								vertical: "top",
+								horizontal: "right"
+							}}
+							keepMounted
+							transformOrigin={{
+								vertical: "top",
+								horizontal: "right"
+							}}
+							open={open}
+							onClose={handleClose}
+						>
+							<MenuItem onClick={deleteItem} className={classes.menuItem}>
+								<Typography color="secondary">Delete</Typography>
+							</MenuItem>
+
+							{nextStates.map(state => {
+								return (
+									<MenuItem
+										onClick={onStateChange.bind(null, state)}
+										key={state}
+										className={classes.menuItem}
+									>
+										{state}
+									</MenuItem>
+								);
+							})}
+						</Menu>
 					</div>
 				}
 				title={application.fullName}

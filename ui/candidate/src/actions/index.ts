@@ -1,5 +1,5 @@
 import { HttpClient } from "@bazo/fetch-client";
-import { Position } from "../types";
+import { Position, Application } from "../types";
 
 const http = new HttpClient();
 
@@ -12,6 +12,13 @@ export async function getPosition(id: string) {
 }
 
 export async function saveApplication(data: any) {
-	console.log(JSON.stringify(data));
 	return http.put<Position>("/api/applications", data);
+}
+
+export async function getPrefilledApplications() {
+	return http.get<Application[]>("https://candidates.free.beeceptor.com/api/candidate");
+}
+
+export async function getApplications() {
+	return await http.get<Application[]>("/api/applications");
 }

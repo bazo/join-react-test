@@ -4,8 +4,7 @@
 	"private": true,
 	"workspaces": {
 		"packages": [
-			"candidate",
-			"recruiter"
+			"candidate"
 		]
 	},
 	"dependencies": {
@@ -31,9 +30,8 @@
 	},
 	"scripts": {
 		"build-candidate": "yarn workspace candidate run build",
-		"build-recruiter": "yarn workspace recruiter run build",
 		"start": "react-scripts start",
-		"build": "npm-run-all --parallel build-candidate build-recruiter",
+		"build": "npm-run-all --parallel build-candidate",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},

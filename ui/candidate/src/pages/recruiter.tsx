@@ -1,8 +1,8 @@
 import React from "react";
-import ApplicationsList from "./applicationsList";
+import ApplicationsList from "../components/applicationsList";
 import { Container, Typography } from "@material-ui/core";
 
-function App() {
+const RecruiterPage = () => {
 	return (
 		<div className="App">
 			<Container maxWidth="lg">
@@ -12,6 +12,6 @@ function App() {
 			</Container>
 		</div>
 	);
-}
+};
 
-export default App;
+export default RecruiterPage;

@@ -13,7 +13,9 @@
 		"react-dropzone": "^10.2.2",
 		"react-easy-crop": "^2.1.0",
 		"react-final-form": "^6.3.5",
-		"react-nl2br": "^0.6.0"
+		"react-nl2br": "^0.6.0",
+		"@material-ui/icons": "^4.9.1",
+		"date-fns": "^2.11.1"
 	},
 	"proxy": "http://localhost:8200/",
 	"scripts": {
