@@ -6,22 +6,25 @@ import { getApplications, getPrefilledApplications } from "../actions";
 
 const ApplicationsList: FC = () => {
 	const [applications, setApplications] = useState((null as unknown) as Application[]);
-	const [loadingMore, setLoadingMore] = useState(true);
+	const [loadingMore, setLoadingMore] = useState(false);
 
 	useEffect(() => {
 		getApplications().then(loaded => {
 			const current = applications ? applications : [];
 			setApplications([...current, ...loaded]);
+			setLoadingMore(true);
 		});
 	}, []);
 
 	useEffect(() => {
-		getPrefilledApplications().then(loaded => {
-			const current = applications ? applications : [];
-			setApplications([...current, ...loaded]);
-			setLoadingMore(false);
-		});
-	}, []);
+		if (loadingMore) {
+			getPrefilledApplications().then(loaded => {
+				const current = applications ? applications : [];
+				setApplications([...current, ...loaded]);
+				setLoadingMore(false);
+			});
+		}
+	}, [loadingMore]);
 
 	const deleteItem = (key: number) => {
 		applications.splice(key);
