@@ -3,4 +3,6 @@
 yarn install
 yarn build
 rice embed-go
-gcloud app deploy --quiet
+gcloud config configurations activate join-react-test
+gcloud config set project join-com-test
+gcloud app deploy --quiet --project join-com-test
