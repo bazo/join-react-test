@@ -6,7 +6,7 @@
 	"author": "Martin Bazik <martin@bazo.sk>",
 	"license": "MIT",
 	"scripts": {
-		"start": "cd ui && yarn workspace candidate start",
+		"start": "cd ui && yarn start",
 		"install": "cd ui && yarn install",
 		"embed": "rice embed-go",
 		"build": "cd ui && yarn build"

@@ -13,8 +13,22 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+before(() => {
+	cy.server();
+	cy.route("/api/**").as("apiRequests");
+
+	//@ts-ignore
+	process.env = process.env || {};
+	//@ts-ignore
+	process.env.RUNNER = "cypress";
+});
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+	console.log({ err, runnable });
+
+	// returning false here prevents Cypress from
+	// failing the test
+	return false;
+});

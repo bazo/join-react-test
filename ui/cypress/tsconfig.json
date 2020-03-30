@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"skipLibCheck": true,
+		"strict": true,
+		"types": ["cypress"]
+	},
+	"include": ["**/*.ts"]
+}

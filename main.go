@@ -67,7 +67,7 @@ func main() {
 
 	api := api.NewAPI(storage)
 
-	candidateBox := rice.MustFindBox("./ui/candidate/build")
+	candidateBox := rice.MustFindBox("./ui/build")
 
 	router := mux.NewRouter()
 

@@ -31,7 +31,7 @@ const PositionsList: FC<Props> = ({ positions }: Props) => {
 				{positions.map(position => {
 					const text = position.data.title[0].text;
 					return (
-						<ListItemLink to={`/positions/${position.id}`} key={position.id}>
+						<ListItemLink to={`/positions/${position.id}`} key={position.id} className="job">
 							<ListItemText primary={text} />
 						</ListItemLink>
 					);
