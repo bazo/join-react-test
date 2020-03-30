@@ -12,4 +12,8 @@ export interface Application {
 		base64: boolean;
 		data: string;
 	};
+	state: string;
+	applied_on: string;
+	avatar: string;
+	fullName: string;
 }

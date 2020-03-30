@@ -9,10 +9,12 @@ type Application struct {
 	Password   string    `json:"password"`
 	FirstName  string    `json:"firstName"`
 	LastName   string    `json:"lastName"`
+	FullName   string    `json:"fullName"`
 	Phone      string    `json:"phone"`
 	Photo      Photo     `json:"photo"`
 	AppliedOn  time.Time `json:"applied_on"`
 	State      string    `json:"state"`
+	Avatar     string    `json:"avatar"`
 }
 
 type Photo struct {

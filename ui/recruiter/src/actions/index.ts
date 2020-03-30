@@ -3,6 +3,10 @@ import { Application } from "../types";
 
 const http = new HttpClient();
 
+export async function getPrefilledApplications() {
+	return http.get<Application[]>("https://candidates.free.beeceptor.com/api/candidate");
+}
+
 export async function getApplications() {
-	return http.get<Application[]>("/api/applications");
+	return await http.get<Application[]>("/api/applications");
 }
