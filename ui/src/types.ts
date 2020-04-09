@@ -35,12 +35,12 @@ export interface Title {
 }
 
 export enum TitleType {
-	Paragraph = "paragraph"
+	Paragraph = "paragraph",
 }
 
 export enum DataType {
 	Employee = "employee",
-	Internship = "internship"
+	Internship = "internship",
 }
 
 export interface URL {
@@ -49,11 +49,11 @@ export interface URL {
 }
 
 export enum LinkType {
-	Web = "Web"
+	Web = "Web",
 }
 
 export enum Lang {
-	EnUs = "en-us"
+	EnUs = "en-us",
 }
 
 export interface Application {
@@ -70,8 +70,15 @@ export interface Application {
 		base64: boolean;
 		data: string;
 	};
-	state: string;
+	state: ApplicationState;
 	applied_on: string;
 	avatar: string;
 	fullName: string;
+}
+
+export enum ApplicationState {
+	SUBMITTED = "submitted",
+	IN_REVIEW = "in review",
+	NOT_A_FIT = "not a fit",
+	HIRED = "hired",
 }

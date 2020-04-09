@@ -12,18 +12,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@material-ui/core";
 import format from "date-fns/format";
 import { calculateApplicationScore } from "../helpers/calculateApplicationScore";
-
-function getNextStates(application: Application): string[] {
-	switch (application.state) {
-		case "submitted":
-			return ["in review"];
-
-		case "in review":
-			return ["not a fit", "hired"];
-		default:
-			return [];
-	}
-}
+import getNextStates from "../helpers/getNextStates";
 
 interface Props {
 	application: Application;
