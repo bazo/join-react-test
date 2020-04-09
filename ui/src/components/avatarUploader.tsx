@@ -4,7 +4,6 @@ import parseDataUrl from "parse-data-url";
 import Cropper from "react-easy-crop";
 import { Area } from "react-easy-crop/types";
 import { Avatar, Button } from "@material-ui/core";
-import { FieldInputProps } from "react-final-form";
 
 const createImage = (url: string) =>
 	new Promise((resolve, reject) => {
@@ -26,19 +25,6 @@ async function getCroppedImg(src: string, pixelCrop: Area) {
 
 	ctx.drawImage(image, 0, 0, 200, 200);
 
-	/*
-	ctx.drawImage(
-		image,
-		pixelCrop.x,
-		pixelCrop.y,
-		pixelCrop.width,
-		pixelCrop.height,
-		0,
-		0,
-		pixelCrop.width,
-		pixelCrop.height
-	);
-		*/
 	// As Base64 string
 	return canvas.toDataURL("image/jpeg");
 }
@@ -67,13 +53,6 @@ export const AvatarUploader = ({ onAvatarUploaded, onAvatarRemove }: Props) => {
 		setSrc(reader.result);
 	};
 
-	const openDialog = () => {
-		if (dropzone.current) {
-			//@ts-ignore
-			dropzone.current.open();
-		}
-	};
-
 	const onDrop = (acceptedFiles: File[]) => {
 		acceptedFiles.forEach(file => reader.readAsDataURL(file));
 	};
@@ -85,7 +64,6 @@ export const AvatarUploader = ({ onAvatarUploaded, onAvatarRemove }: Props) => {
 	const onAvatarCropped = async (avatarSrc: string) => {
 		setDataUrl(avatarSrc);
 		const parsed = parseDataUrl(avatarSrc);
-		console.log(parsed);
 		setSaving(false);
 		setSrc(null);
 		onAvatarUploaded(parsed);
@@ -103,10 +81,9 @@ export const AvatarUploader = ({ onAvatarUploaded, onAvatarRemove }: Props) => {
 	};
 
 	const { getRootProps, getInputProps, open, acceptedFiles, isDragActive } = useDropzone({
-		//noClick: true,
 		onDrop,
 		accept: ["image/png", "image/jpeg"],
-		multiple: false
+		multiple: false,
 	});
 
 	return (
