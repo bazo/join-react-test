@@ -11,28 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@material-ui/core";
 import format from "date-fns/format";
-
-function calculateScore(application: Application): number {
-	const scores = {
-		fullName: 10,
-		email: 10,
-		password: 10,
-		phone: 20,
-		avatar: 50
-	};
-
-	let score = 0;
-
-	for (let [key, points] of Object.entries(scores)) {
-		//@ts-ignore
-		const value = application[key] as string;
-		if (value && value.trim() !== "") {
-			score += points;
-		}
-	}
-
-	return score;
-}
+import calculateApplicationScore from "../helpers/calculateApplicationScore";
 
 function getNextStates(application: Application): string[] {
 	switch (application.state) {
@@ -56,11 +35,11 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
 			maxWidth: "100%",
-			marginTop: 15
+			marginTop: 15,
 		},
 		menuItem: {
-			textTransform: "uppercase"
-		}
+			textTransform: "uppercase",
+		},
 	})
 );
 
@@ -111,12 +90,12 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 							anchorEl={anchorEl}
 							anchorOrigin={{
 								vertical: "top",
-								horizontal: "right"
+								horizontal: "right",
 							}}
 							keepMounted
 							transformOrigin={{
 								vertical: "top",
-								horizontal: "right"
+								horizontal: "right",
 							}}
 							open={open}
 							onClose={handleClose}
@@ -146,7 +125,10 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 				<Typography variant="body2" color="textSecondary" component="div">
 					<Grid container spacing={3}>
 						<Grid item xs={12} sm={6}>
-							<CircularProgress variant="static" value={calculateScore(application)}></CircularProgress>
+							<CircularProgress
+								variant="static"
+								value={calculateApplicationScore(application)}
+							></CircularProgress>
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Chip
