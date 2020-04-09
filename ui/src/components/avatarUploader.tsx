@@ -43,7 +43,6 @@ export const AvatarUploader = ({ onAvatarUploaded, onAvatarRemove }: Props) => {
 	const [saving, setSaving] = useState(false);
 	const [pixelCrop, setPixelCrop] = useState(null as Area);
 
-	const dropzone = useRef<DropzoneRef>();
 	const input = useRef<HTMLInputElement>();
 
 	const reader = new FileReader();
