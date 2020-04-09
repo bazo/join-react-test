@@ -13,7 +13,7 @@ export function calculateApplicationScore(application: Pick<Partial<Application>
 	let score = 0;
 
 	for (let [key, points] of Object.entries(scores)) {
-		const value = application[key] as string;
+		const value = application[key];
 		if (value && value.trim() !== "") {
 			score += points;
 		}
@@ -25,12 +25,9 @@ export function calculateApplicationScore(application: Pick<Partial<Application>
 export function calculateApplicationScoreFunc(application: Pick<Partial<Application>, keyof typeof scores>): number {
 	return Object.entries(scores).reduce(
 		([_, score], [key, points]) => {
-			const value = application[key] as string;
-			if (value && value.trim() !== "") {
-				return ["", score + points];
-			}
-
-			return ["", score + 0];
+			const value = application[key];
+			const newPoints = value && value.trim() !== "" ? points : 0;
+			return ["", score + newPoints];
 		},
 		["", 0]
 	)[1];
