@@ -16,16 +16,17 @@ export async function saveApplication(data: any) {
 }
 
 export async function getPrefilledApplications(): Promise<Application[]> {
-	let prefilled = [] as Application[];
 	try {
-		prefilled = await http.get<Application[]>("https://candidates.free.beeceptor.com/api/candidate");
+		return await http.get<Application[]>("https://candidates.free.beeceptor.com/api/candidate");
 	} catch (err) {
-		prefilled = await http.get<Application[]>(process.env.REACT_APP_CANDIDATES_FILE_URL);
+		return await http.get<Application[]>(process.env.REACT_APP_CANDIDATES_FILE_URL);
 	}
-
-	return prefilled;
 }
 
-export async function getApplications() {
-	return await http.get<Application[]>("/api/applications");
+export async function getApplications(): Promise<Application[]> {
+	try {
+		return await http.get<Application[]>("/api/applications");
+	} catch (err) {
+		return [];
+	}
 }
