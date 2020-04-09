@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@material-ui/core";
 import format from "date-fns/format";
-import calculateApplicationScore from "../helpers/calculateApplicationScore";
+import { calculateApplicationScore } from "../helpers/calculateApplicationScore";
 
 function getNextStates(application: Application): string[] {
 	switch (application.state) {
