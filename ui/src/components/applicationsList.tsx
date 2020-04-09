@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { Application } from "../types";
+import { Application, ApplicationState } from "../types";
 import ApplicationItem from "./applicationItem";
 import { CircularProgress } from "@material-ui/core";
 import { getApplications, getPrefilledApplications } from "../actions";
@@ -31,7 +31,7 @@ const ApplicationsList: FC = () => {
 		setApplications([...applications]);
 	};
 
-	const changeState = (key: number, state: string) => {
+	const changeState = (key: number, state: ApplicationState) => {
 		applications[key].state = state;
 		setApplications([...applications]);
 	};
