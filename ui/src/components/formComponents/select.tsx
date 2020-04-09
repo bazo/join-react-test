@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 interface Item {
 	value: string;
@@ -13,7 +13,7 @@ const Select = ({
 	className = undefined,
 	value,
 	items,
-	onChange
+	onChange,
 }: {
 	prompt?: string | null;
 	name?: string | undefined;
@@ -22,23 +22,20 @@ const Select = ({
 	items: Item[];
 	onChange: OnChange;
 }) => {
-	let options = [];
+	let options = items.map(item => (
+		<option value={item.value.toString()} key={item.value}>
+			{item.label}
+		</option>
+	));
 
 	if (prompt) {
-		options.push(
+		options = [
 			<option value="" key="prompt">
 				{prompt}
-			</option>
-		);
+			</option>,
+			...options,
+		];
 	}
-
-	items.forEach(item => {
-		options.push(
-			<option value={item.value.toString()} key={item.value}>
-				{item.label}
-			</option>
-		);
-	});
 
 	return (
 		<select
