@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Application } from "../types";
+import { Application, ApplicationState } from "../types";
 
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -13,6 +13,7 @@ import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@m
 import format from "date-fns/format";
 import { calculateApplicationScore } from "../helpers/calculateApplicationScore";
 import getNextStates from "../helpers/getNextStates";
+import getStateColor from "../helpers/getStateColor";
 
 interface Props {
 	application: Application;
@@ -120,16 +121,7 @@ const ApplicationItem: FC<Props> = ({ application, onDeleteClicked, onStateChang
 							></CircularProgress>
 						</Grid>
 						<Grid item xs={12} sm={6}>
-							<Chip
-								label={application.state}
-								color={
-									application.state === "not a fit"
-										? "secondary"
-										: application.state === "hired"
-										? "primary"
-										: undefined
-								}
-							/>
+							<Chip label={application.state} color={getStateColor(application)} />
 						</Grid>
 						<Grid item xs={12} sm={12}>
 							Applied on: {formatDate(application.applied_on)}
