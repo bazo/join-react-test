@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { Application, ApplicationState } from "../types";
-
+import { Application } from "../types";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -9,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { CircularProgress, Popper, Grid, Chip, Button, Menu, MenuItem } from "@material-ui/core";
+import { CircularProgress, Grid, Chip, Menu, MenuItem } from "@material-ui/core";
 import format from "date-fns/format";
 import { calculateApplicationScore } from "../helpers/calculateApplicationScore";
 import getNextStates from "../helpers/getNextStates";
