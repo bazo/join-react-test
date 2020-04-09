@@ -10,8 +10,8 @@ import { NavLink } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
 	root: {
 		width: "100%",
-		maxWidth: 360
-	}
+		maxWidth: 360,
+	},
 }));
 
 function ListItemLink(props: ListItemProps<typeof NavLink, { button?: true }>) {

@@ -11,14 +11,14 @@ import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
-			flexGrow: 1
+			flexGrow: 1,
 		},
 		h2: {
-			marginTop: 0
+			marginTop: 0,
 		},
 		input: {
-			color: "#fff"
-		}
+			color: "#fff",
+		},
 	})
 );
 

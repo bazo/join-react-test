@@ -16,7 +16,7 @@ export function formatPhoneNumber(value: string): PhoneNumber {
 			return {
 				dialCode: phoneNumber.countryCallingCode.toString(),
 				number: phoneNumber.nationalNumber.toString(),
-				country: phoneNumber.country
+				country: phoneNumber.country,
 			};
 		}
 	}

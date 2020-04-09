@@ -8,24 +8,24 @@ import { Location } from "history";
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
-			flexGrow: 1
+			flexGrow: 1,
 		},
 		menuButton: {
-			marginRight: theme.spacing(2)
+			marginRight: theme.spacing(2),
 		},
 		title: {
-			flexGrow: 1
+			flexGrow: 1,
 		},
 		navLink: {
 			color: "#ccc",
 			textDecoration: "none",
 			"&:hover": {
-				textDecoration: "underline"
+				textDecoration: "underline",
 			},
 			"&.active": {
-				color: "#fff"
-			}
-		}
+				color: "#fff",
+			},
+		},
 	})
 );
 
