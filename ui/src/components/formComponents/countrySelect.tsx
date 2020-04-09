@@ -25,24 +25,24 @@ export const CountrySelect = ({
 	value,
 	onChange,
 	formatFunction = defaultFormatFunction,
-	prompt = ""
+	prompt = "",
 }: {
 	value: string;
 	onChange: OnSelect;
 	formatFunction?: FormatFunction;
 	prompt?: string;
 }) => {
-	let selectedValue = value ? value.toLowerCase() : null;
-	let options = useMemo(() => {
+	const selectedValue = value ? value.toLowerCase() : null;
+	const options = useMemo(() => {
 		return Object.values(countriesData).map(country => ({
 			value: country.iso2.toLowerCase(),
-			label: formatFunction(country)
+			label: formatFunction(country),
 		}));
 	}, []);
 	return <Select prompt={prompt} items={options} value={selectedValue} onChange={onChange} />;
 };
 
-const CountrySelectControl = ({ input: { onChange, value, name }, prompt, ...rest }: FieldInputProps<string>) => {
+const CountrySelectControl = ({ input: { onChange, value }, prompt }: FieldInputProps<string>) => {
 	return <CountrySelect value={value} onChange={onChange} prompt={prompt} />;
 };
 
